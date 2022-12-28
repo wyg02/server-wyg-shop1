@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bwie.mapper.TbProductMapper">
+
+    <resultMap id="BaseResultMap" type="com.bwie.pojo.TbProduct">
+            <id property="productId" column="product_id" jdbcType="INTEGER"/>
+            <result property="productName" column="product_name" jdbcType="VARCHAR"/>
+            <result property="typeId" column="type_id" jdbcType="INTEGER"/>
+            <result property="productSpu" column="product_spu" jdbcType="VARCHAR"/>
+            <result property="productCover" column="product_cover" jdbcType="VARCHAR"/>
+            <result property="productDesc" column="product_desc" jdbcType="VARCHAR"/>
+            <result property="commentCount" column="comment_count" jdbcType="INTEGER"/>
+            <result property="deleted" column="deleted" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        product_id,product_name,type_id,
+        product_spu,product_cover,product_desc,
+        comment_count,deleted,create_time,
+        update_time
+    </sql>
+</mapper>

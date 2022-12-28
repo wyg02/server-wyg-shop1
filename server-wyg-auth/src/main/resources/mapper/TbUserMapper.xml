@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bwie.mapper.TbUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.bwie.pojo.TbUser">
+            <id property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+            <result property="userPass" column="user_pass" jdbcType="VARCHAR"/>
+            <result property="userMobile" column="user_mobile" jdbcType="VARCHAR"/>
+            <result property="userAvatar" column="user_avatar" jdbcType="VARCHAR"/>
+            <result property="userSex" column="user_sex" jdbcType="TINYINT"/>
+            <result property="deleted" column="deleted" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        user_id,user_name,user_pass,
+        user_mobile,user_avatar,user_sex,
+        deleted,create_time,update_time
+    </sql>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bwie.mapper.TbBrandMapper">
+
+    <resultMap id="BaseResultMap" type="com.bwie.pojo.TbBrand">
+            <id property="brandId" column="brand_id" jdbcType="INTEGER"/>
+            <result property="brandName" column="brand_name" jdbcType="VARCHAR"/>
+            <result property="brandLogo" column="brand_logo" jdbcType="VARCHAR"/>
+            <result property="brandHide" column="brand_hide" jdbcType="INTEGER"/>
+            <result property="brandLetter" column="brand_letter" jdbcType="VARCHAR"/>
+            <result property="brandSort" column="brand_sort" jdbcType="INTEGER"/>
+            <result property="deleted" column="deleted" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        brand_id,brand_name,brand_logo,
+        brand_hide,brand_letter,brand_sort,
+        deleted,create_time,update_time
+    </sql>
+</mapper>

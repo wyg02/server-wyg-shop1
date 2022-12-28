@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bwie.mapper.TbGroupAttrValueMapper">
+
+    <resultMap id="BaseResultMap" type="com.bwie.pojo.TbGroupAttrValue">
+            <id property="valueId" column="value_id" jdbcType="INTEGER"/>
+            <result property="attrValue" column="attr_value" jdbcType="VARCHAR"/>
+            <result property="attrId" column="attr_id" jdbcType="INTEGER"/>
+            <result property="deleted" column="deleted" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        value_id,attr_value,attr_id,
+        deleted,create_time,update_time
+    </sql>
+</mapper>
